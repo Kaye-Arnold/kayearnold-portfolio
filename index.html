@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KayeArnold — Software Developer & Designer. Building clean, functional web applications and data-driven solutions.">
+  <title>KayeArnold | Creative Developer Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- =================================================================
+     NAVIGATION
+================================================================== -->
+<nav class="nav-root" role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-logo">KayeArnold</a>
+
+  <div class="nav-desktop-links" role="menubar">
+    <a href="#projects" class="nav-link active" role="menuitem">Projects</a>
+    <a href="#skills"   class="nav-link"        role="menuitem">Skills</a>
+    <a href="#contact"  class="nav-link"        role="menuitem">Contact</a>
+  </div>
+
+  <div class="nav-actions">
+    <button class="icon-btn" id="theme-toggle" aria-label="Switch to light theme">
+      <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
+    </button>
+    <button class="hamburger" id="hamburger"
+            aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <span class="h-line"></span>
+      <span class="h-line"></span>
+      <span class="h-line"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<nav id="mobile-drawer" class="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="#projects" class="mob-link active" onclick="closeMenu()">Projects</a>
+  <a href="#skills"   class="mob-link"        onclick="closeMenu()">Skills</a>
+  <div class="mob-divider" aria-hidden="true"></div>
+  <a href="#contact"  class="mob-link"        onclick="closeMenu()">Contact</a>
+</nav>
+
+<!-- =================================================================
+     MAIN
+================================================================== -->
+<main id="top">
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <section class="hero" aria-label="Introduction">
+    <div class="glow-blob"
+         style="width:500px;height:500px;top:-10%;right:-5%;background:var(--glow-1);"
+         aria-hidden="true"></div>
+    <div class="glow-blob"
+         style="width:400px;height:400px;bottom:-10%;left:-5%;background:var(--glow-2);"
+         aria-hidden="true"></div>
+
+    <div class="hero-inner">
+
+      <!-- Text column -->
+      <div>
+        <span class="hero-eyebrow">Software Developer &amp; Designer</span>
+        <h1 class="hero-name">
+          Kaye<br>
+          <span class="hero-name-accent">Arnold</span>
+        </h1>
+        <p class="hero-desc">
+          Focused on building scalable, user-centered applications with strong emphasis on security, performance, and real-world usability.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-primary">View Work</a>
+          <a href="#contact"  class="btn-ghost">Get In Touch</a>
+        </div>
+      </div>
+
+      <!-- Portrait — visible on ALL screen sizes -->
+      <div class="portrait-wrap">
+        <div class="portrait-card">
+          <img
+            class="portrait-img"
+            src="assets/images/newportfolio.jpg"
+            alt="Portrait of Kaye Arnold"
+            loading="eager"
+            width="290"
+            height="363">
+          <div class="portrait-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="portrait-badge" aria-hidden="true">
+          <div class="badge-dots">
+            <span class="badge-dot" style="background:var(--accent-1)"></span>
+            <span class="badge-dot" style="background:var(--accent-2)"></span>
+            <span class="badge-dot" style="background:var(--accent-3)"></span>
+          </div>
+          <p class="badge-text">System Status: Active</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── ABOUT ─────────────────────────────────────────────────── -->
+  <section class="about-bg section-pad" aria-label="About">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <span class="ew ew-1">The Narrative</span>
+          <h2 class="h-md">Curating the<br>Future of Web.</h2>
+        </div>
+        <div>
+          <p class="body-text">
+            I design and build modern web applications with a focus on performance, usability, and real-world impact. My work includes secure communication systems, productivity tools, and campus-focused platforms that solve actual problems.
+
+I specialize in turning ideas into functional, user-centered software — from concept to deployment.
+          </p>
+          <div class="tags-row">
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">GLSL</span>
+            <span class="tag">Netlify / Vercel</span>
+            <span class="tag">Git &amp; GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ───────────────────────────────────────────────── -->
+  <section class="section-pad" id="projects" aria-label="Featured projects">
+    <div class="container">
+
+      <div class="proj-header">
+        <div>
+          <span class="ew ew-2">Portfolio</span>
+          <h2 class="h-lg">Featured Artifacts</h2>
+        </div>
+        <div class="proj-rule" aria-hidden="true"></div>
+      </div>
+
+      <div class="bento">
+
+        <!-- ── PROJECT 1: Restaurant Website (b-8 large) ───────── -->
+        <article class="card b-8" aria-label="Restaurant Website project">
+
+          <!-- Image: restaurant interior — 16:9 ratio -->
+          <div class="proj-img-wrap" style="aspect-ratio:16/9;">
+            <img class="proj-img"
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&auto=format&fit=crop&q=80"
+              alt="Warm restaurant interior with dining tables and ambient lighting"
+              loading="lazy"
+              width="900" height="506">
+          </div>
+
+          <!-- Info panel -->
+          <div class="proj-info">
+            <div class="proj-meta-row">
+              <span class="proj-badge-pill">Web Development</span>
+              <span class="proj-year">2025</span>
+            </div>
+
+            <h3 class="proj-title-text">Restaurant Website &amp; Ordering Interface</h3>
+            <p class="proj-desc-text">
+              Responsive website for showcasing menus and improving customer interaction.
+              Features a clean menu layout, smooth scroll navigation, and a mobile-first ordering flow.
+            </p>
+
+            <div class="proj-sub-section">
+              <span class="proj-sub-label">Stack</span>
+              <div class="proj-pills">
+                <span class="proj-pill">HTML</span>
+                <span class="proj-pill">Tailwind CSS</span>
+                <span class="proj-pill">JavaScript</span>
+              </div>
+            </div>
+
+            <div class="proj-sub-section">
+              <span class="proj-sub-label">Impact</span>
+              <div class="proj-pills">
+                <span class="proj-pill-impact">Mobile-friendly</span>
+                <span class="proj-pill-impact">Fast load</span>
+                <span class="proj-pill-impact">Clean navigation</span>
+              </div>
+            </div>
+
+            <div class="proj-cta-row">
+              <a href="#" class="proj-cta proj-cta-primary">
+                Live Demo
+                <span class="material-symbols-outlined" style="font-size:0.875rem;" aria-hidden="true">open_in_new</span>
+              </a>
+              <a href="#" class="proj-cta proj-cta-ghost">
+                GitHub
+                <span class="material-symbols-outlined" style="font-size:0.875rem;" aria-hidden="true">code</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+
+        <!-- ── PROJECT 2: CampusTrust (b-4 small) ──────────────── -->
+        <article class="card b-4" aria-label="CampusTrust project">
+
+          <!-- Image: CampusTrust logo (provided by user) — fills container -->
+          <div class="proj-img-wrap" style="height:220px;">
+            <img class="proj-img"
+              src="assets/images/campustrust.png"
+              alt="CampusTrust app — orange background with large CT logo"
+              loading="lazy"
+              width="220" height="220">
+          </div>
+
+          <!-- Info panel -->
+          <div class="proj-info">
+            <div class="proj-meta-row">
+              <span class="proj-badge-pill">Mobile App</span>
+              <span class="proj-year">2026</span>
+            </div>
+
+            <h3 class="proj-title-text">CampusTrust – Local Service Discovery App for Students</h3>
+            <p class="proj-desc-text">
+              A mobile app designed to solve the problem of unreliable and hard-to-find student services around campus. CampusTrust enables students to quickly discover, verify, and connect with trusted local providers in one place
+            </p>
+
+            <div class="proj-sub-section">
+              <span class="proj-sub-label">Stack</span>
+              <div class="proj-pills">
+                <span class="proj-pill">Flutter</span>
+                <span class="proj-pill">Firebase</span>
+                <span class="proj-pill">Dart</span>
+              </div>
+            </div>
+
+            <div class="proj-sub-section">
+              <span class="proj-sub-label">Impact</span>
+              <div class="proj-pills">
+                <span class="proj-pill-impact">Centralized access</span>
+                <span class="proj-pill-impact">Easy discovery</span>
+                <span class="proj-pill-impact">Campus-built</span>
+              </div>
+            </div>
+
+            <div class="proj-cta-row">
+              <a href="#" class="proj-cta proj-cta-primary">
+                Live Demo
+                <span class="material-symbols-outlined" style="font-size:0.875rem;" aria-hidden="true">open_in_new</span>
+              </a>
+              <a href="#" class="proj-cta proj-cta-ghost">
+                GitHub
+                <span class="material-symbols-outlined" style="font-size:0.875rem;" aria-hidden="true">code</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+
+        <!-- ── PROJECT 3: Student Budget Tracker (b-12 full) ────── -->
+        <article class="card b-12" aria-label="Student Budget Tracker project">
+          <div class="p3-inner" style="display:flex;flex-direction:column;">
+
+            <!-- Image: finance dashboard — fills left half on desktop -->
+            <div class="proj-img-wrap" style="flex:1;min-height:260px;">
+              <img class="proj-img"
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&auto=format&fit=crop&q=80"
+                alt="Data dashboard with charts and financial metrics on a dark screen"
+                loading="lazy"
+                width="900" height="506">
+            </div>
+
+            <!-- Info panel -->
+            <div class="p3-text proj-info" style="justify-content:center;">
+              <div class="proj-meta-row">
+                <span class="proj-badge-pill">Web App</span>
+                <span class="proj-year">2025</span>
+              </div>
+
+              <h3 class="proj-title-text">Student Budget Tracker</h3>
+              <p class="proj-desc-text">
+                A browser-based expense tracker that helps students manage daily finances,
+                categorise spending, and visualise monthly budgets — all saved offline with no sign-up needed.
+              </p>
+
+              <div class="proj-sub-section">
+                <span class="proj-sub-label">Stack</span>
+                <div class="proj-pills">
+                  <span class="proj-pill">HTML</span>
+                  <span class="proj-pill">CSS3</span>
+                  <span class="proj-pill">JavaScript</span>
+                  <span class="proj-pill">Chart.js</span>
+                  <span class="proj-pill">LocalStorage</span>
+                </div>
+              </div>
+
+              <div class="proj-sub-section">
+                <span class="proj-sub-label">Impact</span>
+                <div class="proj-pills">
+                  <span class="proj-pill-impact">Visual charts</span>
+                  <span class="proj-pill-impact">Category tracking</span>
+                  <span class="proj-pill-impact">Offline-ready</span>
+                  <span class="proj-pill-impact">Zero sign-up</span>
+                </div>
+              </div>
+
+              <div class="proj-cta-row">
+                <a href="#" class="proj-cta proj-cta-primary">
+                  Live Demo
+                  <span class="material-symbols-outlined" style="font-size:0.875rem;" aria-hidden="true">open_in_new</span>
+                </a>
+                <a href="#" class="proj-cta proj-cta-ghost">
+                  GitHub
+                  <span class="material-symbols-outlined" style="font-size:0.875rem;" aria-hidden="true">code</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ─────────────────────────────────────────────────── -->
+  <section class="skills-bg section-pad" id="skills" aria-label="Skills and capabilities">
+    <div class="container">
+      <div class="skills-grid">
+
+        <div>
+          <div style="margin-bottom:44px;">
+            <span class="ew ew-1">Capabilities</span>
+            <h2 class="h-xl">Precision<br>Engineering.</h2>
+          </div>
+          <div class="bars">
+            <div class="bar-group">
+              <div class="bar-label-row">
+                <span class="bar-label">Interactive UI Design</span>
+                <span class="bar-pct">95%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:95%;background:var(--bar-1);"></div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label-row">
+                <span class="bar-label">Frontend Architecture</span>
+                <span class="bar-pct">90%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:90%;background:var(--bar-2);"></div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label-row">
+                <span class="bar-label">Application Logic</span>
+                <span class="bar-pct">85%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:85%;background:var(--bar-3);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cap-grid">
+          <div style="display:flex;flex-direction:column;gap:14px;padding-top:32px;">
+            <div class="cap-card">
+              <span class="material-symbols-outlined cap-icon" aria-hidden="true">cloud</span>
+              <p class="cap-title">Cloud Fundamentals.</p>
+              <p class="cap-sub">AWS / Azure / Edge Ops</p>
+            </div>
+            <div class="cap-card">
+              <span class="material-symbols-outlined cap-icon" style="color:var(--accent-2);" aria-hidden="true">view_in_ar</span>
+              <p class="cap-title">WebGL / 3D</p>
+              <p class="cap-sub">Three.js / Shaders / GSAP</p>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="cap-card">
+              <span class="material-symbols-outlined cap-icon" style="color:var(--accent-3);" aria-hidden="true">api</span>
+              <p class="cap-title">API Integration</p>
+              <p class="cap-sub">GraphQL / REST / gRPC</p>
+            </div>
+            <div class="cap-card">
+              <span class="material-symbols-outlined cap-icon" aria-hidden="true">bolt</span>
+              <p class="cap-title">Optimization</p>
+              <p class="cap-sub">Core Web Vitals / Performance</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ────────────────────────────────────────────────── -->
+  <section class="section-pad" id="contact" aria-label="Contact form"
+           style="position:relative;overflow:hidden;">
+    <div class="dot-texture" aria-hidden="true"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="form-wrap">
+        <div style="text-align:center;margin-bottom:56px;">
+          <span class="ew ew-1" style="text-align:center;display:block;">Connectivity</span>
+          <h2 class="h-lg" style="margin-bottom:12px;">Start a Dialogue.</h2>
+          <p style="font-size:0.9375rem;color:var(--tx-muted);">
+            Available for collaborations starting Q3 2026.
+          </p>
+        </div>
+
+        <div class="form-panel">
+          <form novalidate aria-label="Contact form">
+            <div class="form-2col">
+              <div class="form-field">
+                <label class="form-label" for="f-name">Name</label>
+                <input class="form-input" id="f-name" type="text"
+                       placeholder="Your Name" autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="f-email">Email</label>
+                <input class="form-input" id="f-email" type="email"
+                       placeholder="Email Address" autocomplete="email">
+              </div>
+            </div>
+            <div class="form-field" style="margin-bottom:0;">
+              <label class="form-label" for="f-msg">Message</label>
+              <textarea class="form-input form-ta" id="f-msg" rows="4"
+                        placeholder="Briefly describe your project…"></textarea>
+            </div>
+            <div class="form-footer">
+              <div class="form-socials">
+                <a href="#" class="social-btn" aria-label="Portfolio link">
+                  <span class="material-symbols-outlined" aria-hidden="true">link</span>
+                </a>
+                <a href="#" class="social-btn" aria-label="Email">
+                  <span class="material-symbols-outlined" aria-hidden="true">alternate_email</span>
+                </a>
+              </div>
+              <button type="submit" class="btn-primary">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- =================================================================
+     FOOTER
+================================================================== -->
+<footer class="site-footer" aria-label="Site footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">KayeArnold</p>
+        <p class="footer-desc">
+          I’m currently open to opportunities where I can contribute to building secure, scalable, and user-centered applications.
+
+Whether it’s collaboration, freelance work, or a full-time role, I’m always ready to build impactful solutions.
+        </p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <span class="footer-col-title">Navigation</span>
+          <ul class="footer-nav">
+            <li><a href="#projects" class="f-link">Projects</a></li>
+            <li><a href="#skills"   class="f-link">Skills</a></li>
+            <li><a href="#contact"  class="f-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-col-title">Socials</span>
+          <ul class="footer-nav">
+            <li><a href="#" class="f-link">LinkedIn</a></li>
+            <li><a href="#" class="f-link">GitHub</a></li>
+            <li><a href="#" class="f-link">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-rule" aria-hidden="true"></div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 The Digital Curator. Built with intentional asymmetry.</p>
+      <a href="#top" class="back-top">
+        Back to Top
+        <span class="material-symbols-outlined" style="font-size:1rem;" aria-hidden="true">north</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- FAB -->
+<button class="fab" aria-label="Quick contact"
+        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+  <span class="material-symbols-outlined" aria-hidden="true">chat_bubble</span>
+</button>
+
+<!-- Script -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

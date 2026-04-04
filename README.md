@@ -26,4 +26,4 @@ Because this project is built with Vanilla web technologies, no complex build st
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/Kaye-Arnold/kayearnold-portfolio](https://github.com/yourusername/portfolio.git)
+   git clone [https://github.com/Kaye-Arnold/kayearnold-portfolio](https://github.com/Kaye-Arnold/kayearnold-portfolio)

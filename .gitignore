@@ -18,3 +18,8 @@ Thumbs.db
 
 # Log files
 *.log
+
+# Local secrets & Netlify CLI state (never commit)
+.env
+.env.*
+.netlify/

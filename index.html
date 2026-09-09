@@ -522,14 +522,58 @@ Whether it’s collaboration, freelance work, or a full-time role, I’m always 
   </div>
 </footer>
 
-<!-- FAB -->
-<button class="fab" aria-label="Quick contact"
-        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-  <span class="material-symbols-outlined" aria-hidden="true">chat_bubble</span>
+<!-- =================================================================
+     PORTFOLIO ASSISTANT (AI chat) — js/chat.js
+     The FAB toggles the panel. Without JS the button simply scrolls
+     to the contact section, so the page never shows a dead control.
+================================================================== -->
+<button class="fab" id="chat-fab" type="button"
+        aria-label="Open portfolio assistant"
+        aria-haspopup="dialog" aria-expanded="false" aria-controls="chat-panel"
+        onclick="if(!window.KA_CHAT){document.getElementById('contact').scrollIntoView({behavior:'smooth'})}">
+  <span class="material-symbols-outlined fab-icon fab-icon-open" aria-hidden="true">chat_bubble</span>
+  <span class="material-symbols-outlined fab-icon fab-icon-close" aria-hidden="true">close</span>
 </button>
 
-<!-- Script -->
+<section class="chat-panel" id="chat-panel" role="dialog"
+         aria-labelledby="chat-title" aria-describedby="chat-subtitle" tabindex="-1" hidden>
+  <header class="chat-head">
+    <div class="chat-head-text">
+      <span class="chat-status-dot" aria-hidden="true"></span>
+      <div>
+        <h2 class="chat-title" id="chat-title">Portfolio Assistant</h2>
+        <p class="chat-subtitle" id="chat-subtitle">AI · answers from Kaye’s portfolio</p>
+      </div>
+    </div>
+    <button type="button" class="chat-close" id="chat-close" aria-label="Close assistant">
+      <span class="material-symbols-outlined" aria-hidden="true">close</span>
+    </button>
+  </header>
+
+  <div class="chat-log" id="chat-log" role="log" aria-live="polite" aria-relevant="additions" aria-label="Conversation"></div>
+
+  <div class="chat-chips" id="chat-chips" aria-label="Suggested questions">
+    <button type="button" class="chat-chip" data-chat-prompt="View projects">View projects</button>
+    <button type="button" class="chat-chip" data-chat-prompt="What are Kaye's skills?">What are Kaye's skills?</button>
+    <button type="button" class="chat-chip" data-chat-prompt="Tell me about CampusTrust">Tell me about CampusTrust</button>
+    <button type="button" class="chat-chip" data-chat-prompt="How can I contact Kaye?">How can I contact Kaye?</button>
+  </div>
+
+  <form class="chat-form" id="chat-form" autocomplete="off">
+    <label class="sr-only" for="chat-input">Your question</label>
+    <textarea class="chat-input" id="chat-input" rows="1" maxlength="1000"
+              placeholder="Ask about projects, skills…" enterkeyhint="send"></textarea>
+    <button type="submit" class="chat-send" id="chat-send" aria-label="Send message" disabled>
+      <span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span>
+    </button>
+  </form>
+  <p class="chat-foot" id="chat-foot">AI assistant — may be imperfect. Email <a href="mailto:contact.ArnoldDev@proton.me">contact.ArnoldDev@proton.me</a> to reach Kaye directly.</p>
+</section>
+
+<!-- Scripts -->
 <script src="js/main.js"></script>
+<script src="js/contact.js" defer></script>
+<script src="js/chat.js" defer></script>
 
 </body>
 </html>

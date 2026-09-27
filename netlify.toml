@@ -1,3 +1,8 @@
+
+[build]
+  base = "."
+  publish = "."
+=======
 # Netlify configuration — kayearnold-portfolio
 #
 # The site is plain static HTML/CSS/JS served from the repository root.
@@ -24,3 +29,4 @@
   to = "/index.html"
   status = 404
   force = true
+

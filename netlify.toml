@@ -1,3 +1,32 @@
+
 [build]
   base = "."
   publish = "."
+=======
+# Netlify configuration — kayearnold-portfolio
+#
+# The site is plain static HTML/CSS/JS served from the repository root.
+# The only server-side code is the portfolio-assistant function in
+# netlify/functions/chat.mjs, exposed at POST /api/chat (see its `config`).
+#
+# Secrets are NOT stored here. Set them in the Netlify UI:
+#   Site configuration → Environment variables
+#     GEMINI_API_KEY   (required)  — Google AI Studio key, scope: Functions
+#     GEMINI_MODEL     (optional)  — defaults to gemini-3.5-flash-lite
+
+[build]
+  base = "."
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+
+# The publish directory is the repo root, so make sure nothing under /netlify
+# (the function source) is ever served as a static asset.
+# `force = true` makes this rule win even though a matching file exists.
+[[redirects]]
+  from = "/netlify/*"
+  to = "/index.html"
+  status = 404
+  force = true
+
